@@ -5,7 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
-import logo from '../img/shop.png'
+import logo from './img/shop.png'
 import { ShoppingCart } from '@material-ui/icons';
 import {Badge} from '@material-ui/core'
 import { teal} from '@material-ui/core/colors';

@@ -24,7 +24,7 @@ const products = [
     {
       id: 3,
       name: "Coffee Maker",
-      productType: "L14dc19 Black Filter Coffee Machine",
+      productType: "Black Filter Coffee Machine",
       price: 28,
       rating: 3,
       image:

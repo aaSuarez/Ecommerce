@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
   
 }));
 
-export default function Product() {
+export default function Product({product:{id,name,image,price,rating,description,productType}}) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -56,28 +56,27 @@ export default function Product() {
             variant = 'h5'
             color = 'textSecondary'
           >
-            {accounting.formatMoney(50)}
+            {accounting.formatMoney(price)}
           </Typography>
         }
-        title="Shoes"
-        subheader="In stock"
+        title={name}
+        subheader={productType}
       />
       <CardMedia
         className={classes.media}
-        image="/static/images/cards/paella.jpg"
-        title="nike"
+        image={image}
+        title={name}
       />
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-          This impressive paella is a perfect party dish and a fun meal to cook together with your
-          guests. Add 1 cup of frozen peas along with the mussels, if you like.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo libero voluptatum autem voluptatibus iusto sapiente officiis dicta, aperiam temporibus.
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="Add to Cart">
           <AddShoppingCart fontSize='large' />
           </IconButton>
-        {Array(4)
+        {Array(rating)
           .fill()
           .map((_, i) => (
             <p>&#11088;</p>
@@ -97,7 +96,7 @@ export default function Product() {
         <CardContent>
         
           <Typography paragraph>
-          zapatillas para correr
+          {description}
           </Typography>
           
         </CardContent>
